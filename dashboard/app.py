@@ -34,7 +34,6 @@ salary = q("SELECT * FROM agg_salary_benchmarks")
 trends = q("SELECT * FROM agg_skill_by_snapshot ORDER BY snapshot_date")
 taxonomy = q("SELECT skill, category FROM skill_taxonomy")
 
-n_snapshots = jobs  # placeholder guard (single-snapshot week 1)
 snapshots = q("SELECT DISTINCT snapshot_date FROM raw_job_postings ORDER BY 1")
 
 st.title("📡 Data Job Market Radar")

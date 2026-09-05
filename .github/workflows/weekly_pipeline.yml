@@ -23,7 +23,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: warehouse.duckdb
-          key: jobradar-warehouse-${{ github.run_week }}
+          key: jobradar-warehouse-v1
           restore-keys: jobradar-warehouse-
 
       - name: Ingest postings
