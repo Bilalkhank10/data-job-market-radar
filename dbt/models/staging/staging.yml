@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_jobs
+    description: Typed postings at (job × snapshot) grain.
+    columns:
+      - name: job_key
+        tests: [not_null]
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['remoteok', 'jobicy', 'remotive', 'arbeitnow']
+      - name: seniority
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['intern', 'junior', 'mid', 'senior']
+      - name: role_family
+        tests: [not_null]
+      - name: snapshot_date
+        tests: [not_null]

@@ -1,0 +1,52 @@
+skill,category,regex,case_sensitive
+SQL,Language,(?i)\bsql\b,0
+Python,Language,(?i)\bpython\b,0
+R,Language,(?<![A-Za-z])R(?![A-Za-z]),1
+Scala,Language,(?i)\bscala\b,0
+Java,Language,(?i)\bjava\b(?!script),0
+dbt,Modeling,(?i)\bdbt\b|data build tool,0
+Airflow,Orchestration,(?i)\bairflow\b,0
+Dagster,Orchestration,(?i)\bdagster\b,0
+Prefect,Orchestration,(?i)\bprefect\b,0
+Spark,Processing,(?i)\bspark\b|pyspark,0
+Kafka,Streaming,(?i)\bkafka\b,0
+Snowflake,Warehouse,(?i)\bsnowflake\b,0
+BigQuery,Warehouse,(?i)\bbigquery\b|big query,0
+Redshift,Warehouse,(?i)\bredshift\b,0
+Databricks,Warehouse,(?i)\bdatabricks\b,0
+DuckDB,Warehouse,(?i)\bduckdb\b,0
+PostgreSQL,Database,(?i)\bpostgres(ql)?\b,0
+MySQL,Database,(?i)\bmysql\b,0
+MongoDB,Database,(?i)\bmongodb\b|\bmongo\b,0
+Tableau,BI,(?i)\btableau\b,0
+Power BI,BI,(?i)\bpower ?bi\b,0
+Looker,BI,(?i)\blooker\b|lookml,0
+Metabase,BI,(?i)\bmetabase\b,0
+Excel,BI,(?i)\bexcel\b|spreadsheet,0
+Plotly,BI,(?i)\bplotly\b,0
+Streamlit,BI,(?i)\bstreamlit\b,0
+AWS,Cloud,(?i)\baws\b|amazon web services,0
+GCP,Cloud,(?i)\bgcp\b|google cloud,0
+Azure,Cloud,(?i)\bazure\b,0
+Docker,Infra,(?i)\bdocker\b,0
+Kubernetes,Infra,(?i)\bkubernetes\b|\bk8s\b,0
+Git,Infra,(?i)\bgit\b(?!hub)|\bgithub\b,0
+Terraform,Infra,(?i)\bterraform\b,0
+Fivetran,ELT,(?i)\bfivetran\b,0
+Airbyte,ELT,(?i)\bairbyte\b,0
+Pandas,Python-lib,(?i)\bpandas\b,0
+NumPy,Python-lib,(?i)\bnumpy\b,0
+scikit-learn,ML,(?i)\bscikit-?learn\b|\bsklearn\b,0
+PyTorch,ML,(?i)\bpytorch\b,0
+TensorFlow,ML,(?i)\btensorflow\b,0
+MLflow,ML,(?i)\bmlflow\b,0
+Great Expectations,Data Quality,(?i)\bgreat expectations\b|\bgx\b,0
+A/B Testing,Analytics,(?i)\ba/?b test(ing)?s?\b|experimentation,0
+Statistics,Analytics,(?i)\bstatistics?\b|statistical analysis,0
+ETL/ELT,Analytics,(?i)\betl\b|\belt\b,0
+Data Modeling,Analytics,(?i)\bdata model(ing|ling)?\b|dimensional model,0
+Dashboarding,Analytics,(?i)\bdashboard(s|ing)?\b,0
+Data Storytelling,Analytics,(?i)\bdata storytel\w+\b|storytelling,0
+GenAI/LLMs,Emerging,(?i)\bllms?\b|gen\s?ai|openai|generative ai,0
+dbt Semantic Layer,Emerging,(?i)\bsemantic layer\b|metrics layer,0
+Data Contracts,Emerging,(?i)\bdata contracts?\b,0

@@ -1,0 +1,13 @@
+warehouse.duckdb
+warehouse.duckdb.wal
+data/raw/
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+logs/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+.idea/
+.vscode/

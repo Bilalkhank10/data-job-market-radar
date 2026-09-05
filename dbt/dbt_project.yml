@@ -1,0 +1,26 @@
+name: job_market_radar
+version: 1.0.0
+config-version: 2
+
+profile: job_market_radar
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+clean-targets: [target, dbt_packages]
+
+models:
+  job_market_radar:
+    staging:
+      +materialized: view
+      +docs: {node_color: "#8f97a3"}
+    intermediate:
+      +materialized: view
+      +docs: {node_color: "#b7791f"}
+    marts:
+      +materialized: table
+      +docs: {node_color: "#0e7c3a"}
+
+seeds:
+  +quote_columns: false

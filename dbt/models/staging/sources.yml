@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: raw
+    description: >
+      Append-snapshot raw postings. One row per (source, external_id,
+      snapshot_date) — the ingestion layer deletes-then-inserts the current
+      snapshot per source, so history accumulates week over week while reruns
+      stay idempotent.
+    schema: main
+    tables:
+      - name: raw_job_postings
+        loaded_at_field: fetched_at
+        freshness:
+          warn_after: {count: 9, period: day}   # weekly pipeline
+          error_after: {count: 16, period: day}
+        columns:
+          - name: source
+            tests: [not_null]
+          - name: external_id
+            tests: [not_null]
+          - name: title
+            tests: [not_null]
+          - name: snapshot_date
+            tests: [not_null]
